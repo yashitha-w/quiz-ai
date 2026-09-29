@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QuizMaster - Smart Mock Test</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- HOME PAGE -->
+    <section id="homePage" class="page active">
+
+        <div class="home-container">
+
+            <div class="home-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+
+            <h1>QuizMaster</h1>
+
+            <h2>Smart Mock Test Platform</h2>
+
+            <p>
+                Test your knowledge, improve your skills,
+                and track your performance with interactive quizzes.
+            </p>
+
+            <button class="primary-btn" onclick="showSetup()">
+                <i class="fa-solid fa-play"></i>
+                Start Quiz
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- SETUP PAGE -->
+    <section id="setupPage" class="page">
+
+        <div class="setup-container">
+
+            <h1>Quiz Setup</h1>
+
+            <p>Enter your details to begin the test.</p>
+
+            <div class="input-group">
+                <label>Student Name</label>
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Enter your name"
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Select Subject</label>
+
+                <select id="subject">
+                    <option value="AI">Artificial Intelligence</option>
+                    <option value="Python">Python</option>
+                    <option value="Java">Java</option>
+                    <option value="DBMS">DBMS</option>
+                    <option value="Web">Web Development</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Select Difficulty</label>
+
+                <select id="difficulty">
+                    <option value="Easy">Easy</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+
+            <button class="primary-btn" onclick="startQuiz()">
+                <i class="fa-solid fa-rocket"></i>
+                Start Test
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- QUIZ PAGE -->
+    <section id="quizPage" class="page">
+
+        <div class="quiz-container">
+
+            <div class="quiz-header">
+
+                <div>
+                    <span id="questionNumber">Question 1</span>
+                    <span id="totalQuestions">/ 10</span>
+                </div>
+
+                <div class="timer">
+                    <i class="fa-solid fa-clock"></i>
+                    <span id="timer">60</span>s
+                </div>
+
+            </div>
+
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div id="progressBar"></div>
+            </div>
+
+
+            <div class="question-card">
+
+                <h2 id="questionText">
+                    Question will appear here
+                </h2>
+
+                <div id="optionsContainer">
+
+                    <!-- Options will be added using JavaScript -->
+
+                </div>
+
+            </div>
+
+
+            <div class="navigation-buttons">
+
+                <button
+                    id="previousBtn"
+                    class="secondary-btn"
+                    onclick="previousQuestion()"
+                >
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Previous
+                </button>
+
+                <button
+                    id="nextBtn"
+                    class="primary-btn"
+                    onclick="nextQuestion()"
+                >
+                    Next
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+                <button
+                    id="submitBtn"
+                    class="submit-btn"
+                    onclick="submitQuiz()"
+                >
+                    Submit Quiz
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- RESULT PAGE -->
+    <section id="resultPage" class="page">
+
+        <div class="result-container">
+
+            <div class="result-icon">
+                <i class="fa-solid fa-trophy"></i>
+            </div>
+
+            <h1>Quiz Completed!</h1>
+
+            <p id="resultMessage"></p>
+
+            <div class="result-card">
+
+                <h2 id="resultName">Student Name</h2>
+
+                <div class="result-grid">
+
+                    <div>
+                        <span>Total Questions</span>
+                        <strong id="totalResult">10</strong>
+                    </div>
+
+                    <div>
+                        <span>Correct Answers</span>
+                        <strong id="correctResult">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Wrong Answers</span>
+                        <strong id="wrongResult">0</strong>
+                    </div>
+
+                    <div>
+                        <span>Percentage</span>
+                        <strong id="percentageResult">0%</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="primary-btn" onclick="restartQuiz()">
+                <i class="fa-solid fa-rotate-right"></i>
+                Retake Quiz
+            </button>
+
+            <button class="secondary-btn" onclick="goHome()">
+                <i class="fa-solid fa-house"></i>
+                Back to Home
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

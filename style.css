@@ -1,0 +1,425 @@
+/* =========================
+   GENERAL STYLES
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef4ff, #f8f5ff);
+    color: #222;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 30px 20px;
+}
+
+.page.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    background: white;
+    padding: 55px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.home-icon {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #e9e4ff;
+    color: #6546d7;
+
+    border-radius: 50%;
+
+    font-size: 42px;
+}
+
+.home-container h1 {
+    font-size: 48px;
+    color: #4d36b8;
+    margin-bottom: 10px;
+}
+
+.home-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.home-container p {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-btn,
+.secondary-btn,
+.submit-btn {
+    border: none;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.primary-btn {
+    background: #6546d7;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #5034bd;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background: #eeeeee;
+    color: #333;
+}
+
+.secondary-btn:hover {
+    background: #dddddd;
+}
+
+.submit-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.submit-btn:hover {
+    background: #c0392b;
+}
+
+
+/* =========================
+   SETUP PAGE
+========================= */
+
+.setup-container {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 40px;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.setup-container h1 {
+    color: #4d36b8;
+    margin-bottom: 10px;
+}
+
+.setup-container > p {
+    color: #777;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #6546d7;
+}
+
+
+/* =========================
+   QUIZ PAGE
+========================= */
+
+.quiz-container {
+    width: 100%;
+    max-width: 850px;
+    background: white;
+    padding: 30px;
+    border-radius: 22px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.quiz-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+
+    font-weight: bold;
+    color: #4d36b8;
+}
+
+.timer {
+    background: #fff0ed;
+    color: #e74c3c;
+    padding: 9px 15px;
+    border-radius: 8px;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-container {
+    width: 100%;
+    height: 9px;
+    background: #eeeeee;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#progressBar {
+    height: 100%;
+    width: 10%;
+    background: #6546d7;
+    transition: 0.3s;
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+.question-card {
+    background: #f8f8ff;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.question-card h2 {
+    font-size: 22px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   ANSWER OPTIONS
+========================= */
+
+.option {
+    display: block;
+    background: white;
+    border: 2px solid #e1e1e1;
+
+    padding: 15px;
+    margin-bottom: 12px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.option:hover {
+    border-color: #6546d7;
+    background: #f4f1ff;
+}
+
+.option.selected {
+    border-color: #6546d7;
+    background: #eeeaff;
+}
+
+.option input {
+    margin-right: 10px;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navigation-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+
+/* =========================
+   RESULT PAGE
+========================= */
+
+.result-container {
+    width: 100%;
+    max-width: 650px;
+    text-align: center;
+    background: white;
+
+    padding: 45px 35px;
+
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.result-icon {
+    width: 80px;
+    height: 80px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #fff4d6;
+    color: #f2a900;
+
+    border-radius: 50%;
+
+    font-size: 35px;
+}
+
+.result-container h1 {
+    color: #4d36b8;
+    margin-bottom: 10px;
+}
+
+#resultMessage {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+
+/* =========================
+   RESULT CARD
+========================= */
+
+.result-card {
+    background: #f8f8ff;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+
+.result-card h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.result-grid div {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+}
+
+.result-grid span {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 7px;
+}
+
+.result-grid strong {
+    font-size: 22px;
+    color: #6546d7;
+}
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+    .home-container,
+    .setup-container,
+    .quiz-container,
+    .result-container {
+        padding: 25px 20px;
+    }
+
+    .home-container h1 {
+        font-size: 38px;
+    }
+
+    .home-container h2 {
+        font-size: 20px;
+    }
+
+    .question-card {
+        padding: 20px;
+    }
+
+    .question-card h2 {
+        font-size: 18px;
+    }
+
+    .quiz-header {
+        font-size: 14px;
+    }
+
+    .result-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navigation-buttons {
+        flex-direction: column;
+    }
+
+    .navigation-buttons button {
+        width: 100%;
+    }
+}
